@@ -2,14 +2,15 @@ from pathlib import Path
 from typing import Union
 
 import matplotlib.pyplot as plt
+import numpy as np
 import torchio as tio
 from matplotlib.figure import Figure
-import numpy as np
+
 from ..single import SinglePlot
 
 
 class MultiplePlot(SinglePlot):
-    def plot(    # pylint: disable=arguments-differ
+    def plot(  # pylint: disable=arguments-differ
         self,
         show: bool = True,
         **kwargs: Union[str, Path],

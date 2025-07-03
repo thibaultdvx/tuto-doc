@@ -1,7 +1,8 @@
-from neuroplot.transforms import Noise, RescaleIntensity, ToOrientation
+import numpy as np
 import pytest
 import torchio as tio
-import numpy as np
+
+from neuroplot.transforms import Noise, RescaleIntensity, ToOrientation
 
 X = tio.ScalarImage(tensor=np.random.randn(1, 3, 4, 5))
 
