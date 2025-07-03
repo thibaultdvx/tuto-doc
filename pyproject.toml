@@ -7,7 +7,7 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = "3.12.*"
+requires-python = ">=3.12,<3.13"
 
 [tool.poetry]
 packages = [
@@ -15,13 +15,30 @@ packages = [
 ]
 
 [tool.poetry.dependencies]
-python = "3.12.*"
+python = ">=3.12,<3.13"
 matplotlib = "~=3.10"
 torchio = "~=0.20"
 numpy = "~=2.3"
 
 [tool.poetry.group.dev.dependencies]
-pytest = "^8.4"
+pytest = "~=8.4"
+pytest-cov = "~=6.2"
+ruff = "~=0.12"
+pre-commit = "~=4.2"
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = ["E501", "F401"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["neuroplot"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

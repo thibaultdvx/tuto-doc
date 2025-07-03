@@ -1,8 +1,8 @@
+import shutil
 from pathlib import Path
 
 import numpy as np
 import torchio as tio
-import shutil
 
 TMP_DIR = Path(__file__).parent / "tmp"
 
