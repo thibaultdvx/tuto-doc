@@ -1,10 +1,8 @@
-# Python and system files
+.pytest_cache
+.ruff_cache
+__pycache__
 *.pyc
-
-# Editor's files
 .idea
 .vscode
 .env
-
-# Code coverage
 .coverage
