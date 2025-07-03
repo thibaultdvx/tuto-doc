@@ -36,7 +36,7 @@ class SinglePlot:
 
         fig, plot_axes = plt.subplots(1, len(self.axes), figsize=self.figsize)
         if len(self.axes) == 1:
-            plot_axes = [plot_axes] # turn it into an iterable
+            plot_axes = [plot_axes]  # turn it into an iterable
 
         for ax, slc, plot_axis in zip(self.axes, slices, plot_axes):
             plot_axis.set_xlabel(f"axis={ax}, slice={slc}")
@@ -68,9 +68,9 @@ class SinglePlot:
         else:
             n_slices = len(slices)
 
-        assert len(axes) == n_slices, (
-            f"Got {len(axes)} elements for 'axes', but {n_slices} for 'slices'."
-        )
+        assert (
+            len(axes) == n_slices
+        ), f"Got {len(axes)} elements for 'axes', but {n_slices} for 'slices'."
 
         return axes, slices
 
