@@ -1,0 +1,28 @@
+[project]
+name = "neuroplot"
+version = "0.1.0"
+description = "Toy library for documentation tutorial"
+authors = [
+    {name = "thibaultdvx",email = "thibault.devarax@icm-institute.org"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "3.12.*"
+
+[tool.poetry]
+packages = [
+    { include = "neuroplot", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = "3.12.*"
+matplotlib = "~=3.10"
+torchio = "~=0.20"
+numpy = "~=2.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

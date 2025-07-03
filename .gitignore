@@ -1,0 +1,10 @@
+# Python and system files
+*.pyc
+
+# Editor's files
+.idea
+.vscode
+.env
+
+# Code coverage
+.coverage

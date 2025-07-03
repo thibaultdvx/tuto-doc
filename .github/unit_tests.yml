@@ -1,0 +1,31 @@
+name: Unit Tests
+
+on:
+  push:
+    branches: ["code"]
+  pull_request:
+    branches: ["code"]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Run unit tests on ${{ matrix.os }} with Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        python-version: ['3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: snok/install-poetry@v1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: poetry
+      - name: Install package
+        run: poetry install
+      - name: Run unit tests
+        run: poetry run python -m pytest -vv --cov=calculator tests/unittests
