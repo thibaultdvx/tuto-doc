@@ -18,7 +18,7 @@ class MultiplePlot(SinglePlot):
         images: dict[str, tio.ScalarImage] = {
             name: self.transforms(tio.ScalarImage(path=path)).numpy().squeeze(0)
             for name, path in kwargs.items()
-        }
+        }  #
 
         fig, plot_axes = plt.subplots(len(images), len(self.axes), figsize=self.figsize)
         if len(images) == 1:
