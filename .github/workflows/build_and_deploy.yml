@@ -21,12 +21,11 @@ jobs:
       - name: Install package
         run: poetry install
       - name: Sphinx build
-        run: make html
-        working-directory: docs
+        run: poetry run sphinx-build -M html docs docs/_build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: build/html
+          path: docs/_build
 
   deploy:
     environment:
