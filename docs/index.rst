@@ -46,25 +46,18 @@ NeuroPlot is a Python library for plotting neuroimaging data.
         Code with NeuroPlot
 
 .. toctree::
-   :maxdepth: 1
-   :hidden:
+    :maxdepth: 1
+    :hidden:
 
-   installation
-   getting_started
-   user_guide/index
-   api/index
-
-.. toctree::
-   :caption: development
-   :maxdepth: 1
-   :hidden:
-
-   contributing
-   GitHub <https://github.com/aramis-lab/tuto-doc>
+    installation
+    getting_started
+    user_guide/index
+    api/index
 
 .. toctree::
-   :caption: tutorial
-   :maxdepth: 2
-   :hidden:
+    :caption: development
+    :maxdepth: 1
+    :hidden:
 
-   tutorial/index
+    contributing
+    GitHub <https://github.com/aramis-lab/tuto-doc>

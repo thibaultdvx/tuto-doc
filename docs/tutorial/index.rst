@@ -11,6 +11,14 @@ Dev meeting, July 2025.
    write
    configure
    api/index
+   examples
+   deploy/index
+
+.. toctree::
+   :caption: Bonus
+   :maxdepth: 1
+   
+   glossary
 
 Introduction
 ------------

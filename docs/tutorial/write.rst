@@ -49,6 +49,7 @@ This simply because we have to build a table of contents in our ``index.rst`` pa
         .. toctree::
             :caption: development
             :maxdepth: 1
+
             contributing
             GitHub <https://github.com/aramis-lab/tuto-doc>
 
@@ -95,7 +96,7 @@ markdown
 --------
 
 If you are reluctant to learn a new syntax or if you think that ``markdown`` is enough for what you
-want to do, you can still configure Sphinx so that it reads ``.md`` files. To to this, let's take a
+want to do, you can still configure Sphinx so that it reads ``.md`` files. To do this, let's take a
 look at how to :doc:`configure our documentation <configure>`.
 
 -----
@@ -105,4 +106,4 @@ look at how to :doc:`configure our documentation <configure>`.
 
     .. code-block:: bash
 
-        git reset --hard
+        git reset --hard 8cb1dc2fe427c2f43e036b8faa99da3cca9addf5

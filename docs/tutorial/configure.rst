@@ -20,11 +20,18 @@ First, we need to install it:
 
     poetry add furo --group docs
 
-Then, in ``conf.py``, change html_theme`` to ``html_theme="furo"``.
+Then, in ``conf.py``, change ``html_theme`` to ``html_theme = "furo"``.
 
 Finally, build the documentation! (``make html``).
 
 It looks better, doesn't it?
+
+Change the title
+----------------
+
+The current title is a bit long. Let's put only ``NeuroPlot`` as title.
+
+In ``conf.py``, add ``html_title = "NeuroPlot"``.
 
 Add a logo
 ----------
@@ -186,7 +193,7 @@ Have a look at the result in your website!
 I hope Sphinx configuration is clear now. Please understand that we have only mentioned
 a few examples of the many features offered by Sphinx.
 
-Our documentation looks great, but a central element is still missing: the `API Reference <>`_
+Our documentation looks great, but a central element is still missing the :doc:`API Reference <api/index>`.
 
 -----
 
@@ -195,4 +202,4 @@ Our documentation looks great, but a central element is still missing: the `API 
 
     .. code-block:: bash
 
-        git reset --hard da8cd18eb135f909244f70a7d4f6f9e0dff45a3c
+        git reset --hard 3d21a9b06d141bf0ca2e01b8d56d55452f2f0d99
