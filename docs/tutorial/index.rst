@@ -101,8 +101,14 @@ Clone the repo
 The repository of ``neuroplot`` is available `here <https://github.com/aramis-lab/tuto-doc>`_.
 
 The first step of the tutorial is to **fork the repository**, and then to **clone it**.
+Then checkout to the ``code`` branch, and create a new branch from the latter:
 
-Then you can navigate inside the project to have an overview. All the files that you will find are related
+.. code-block::
+
+    git checkout code
+    git checkout -b tutorial
+
+This is the starting point of the tutorial. All the files that you will find are related
 to Python, and there is nothing related to documentation.
 
 The Python architecture of the project is very simple and looks like this:
@@ -137,7 +143,7 @@ to create a new Python environment. To do that, put yourself in the ``tuto-doc``
     conda env create -f environment.yml
     conda activate tuto-doc
 
-Then, install the required dependencies with `poetry`:
+Then, install the required dependencies with ``poetry``:
 
 .. code-block::
 
@@ -158,3 +164,17 @@ Check that everything is working by running:
     poetry run pytest tests/unittests
 
 So far, so good? Great! Let's get into the nitty-gritty, starting with :doc:`installing Sphinx <sphinx>`.
+
+.. important::
+
+    At the end of each step of the tutorial, we will give you the hash of a git commit that will
+    lead you to the point you should have reached at the end of this step.
+
+    For example, if you don't manage to finish :doc:`step 1 <sphinx>`, this will lead you to the
+    expected result:
+
+    .. code-block::
+
+        git checkout da8cd18eb135f909244f70a7d4f6f9e0dff45a3c
+
+
