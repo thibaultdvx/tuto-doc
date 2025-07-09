@@ -29,6 +29,9 @@ pre-commit = "~=4.2"
 
 [tool.poetry.group.docs.dependencies]
 sphinx = "^8.2.3"
+furo = "^2024.8.6"
+sphinx-design = "^0.6.1"
+sphinx-copybutton = "^0.5.2"
 
 [tool.ruff]
 line-length = 88

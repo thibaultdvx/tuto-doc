@@ -1,17 +1,63 @@
-.. NeuroPlot documentation master file, created by
-   sphinx-quickstart on Thu Jul  3 18:22:37 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+NeuroPlot
+=========
 
-NeuroPlot documentation
-=======================
+NeuroPlot is a Python library for plotting neuroimaging data.
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
+.. grid::
 
+    .. grid-item-card:: Installation
+        :link: installation
+        :link-type: doc
+        :columns: 12 12 6 6
+        :class-card: sd-shadow-md
+        :class-title: sd-text-primary
+        :margin: 2 2 0 0
+
+        Install NeuroPlot
+
+    .. grid-item-card:: Getting Started
+        :link: getting_started
+        :link-type: doc
+        :columns: 12 12 6 6
+        :class-card: sd-shadow-md
+        :class-title: sd-text-primary
+        :margin: 2 2 0 0
+
+        Overview of NeuroPlot's main features
+
+    .. grid-item-card:: User Guide
+        :link: user_guide/index
+        :link-type: doc
+        :columns: 12 12 6 6
+        :class-card: sd-shadow-md
+        :class-title: sd-text-primary
+        :margin: 2 2 0 0
+
+        More details on NeuroPlot's features
+
+    .. grid-item-card:: API Reference
+        :link: api/index
+        :link-type: doc
+        :columns: 12 12 6 6
+        :class-card: sd-shadow-md
+        :class-title: sd-text-primary
+        :margin: 2 2 0 0
+
+        Code with NeuroPlot
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
+   :hidden:
 
+   installation
+   getting_started
+   user_guide/index
+   api/index
+
+.. toctree::
+   :caption: development
+   :maxdepth: 1
+   :hidden:
+
+   contributing
+   GitHub <https://github.com/aramis-lab/tuto-doc>
