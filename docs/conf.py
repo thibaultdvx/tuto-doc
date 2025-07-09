@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = "Neuroplot"
+project = "NeuroPlot"
 copyright = "2025, ARAMIS Lab"
 author = "ARAMIS Lab"
 release = "0.1.0"

@@ -1,9 +1,9 @@
-.. Neuroplot documentation master file, created by
+.. NeuroPlot documentation master file, created by
    sphinx-quickstart on Thu Jul  3 18:22:37 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Neuroplot documentation
+NeuroPlot documentation
 =======================
 
 Add your content using ``reStructuredText`` syntax. See the
