@@ -1,17 +1,19 @@
-.. NeuroPlot documentation master file, created by
-   sphinx-quickstart on Thu Jul  3 18:22:37 2025.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+NeuroPlot
+=========
 
-NeuroPlot documentation
-=======================
-
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+NeuroPlot is a Python library for plotting neuroimaging data.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+    :maxdepth: 1
 
+    installation
+    getting_started
+    user_guide/index
+    api/index
+
+.. toctree::
+    :caption: development
+    :maxdepth: 1
+
+    contributing
+    GitHub <https://github.com/aramis-lab/tuto-doc>
