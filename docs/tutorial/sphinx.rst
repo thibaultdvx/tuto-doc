@@ -7,7 +7,7 @@ handle**.
 
 To install Sphinx, use ``poetry``:
 
-.. code-block::
+.. code-block:: bash
 
     poetry add sphinx --group docs
 
@@ -18,20 +18,20 @@ To install Sphinx, use ``poetry``:
 
 Then, create a ``docs`` folder:
 
-.. code-block::
+.. code-block:: bash
 
     mkdir docs
     cd docs
 
 And finally, run:
 
-.. code-block::
+.. code-block:: bash
 
     sphinx-quickstart
 
 It will ask you several questions. You can give the following answer:
 
-.. code-block::
+.. code-block:: text
 
     > Separate source and build directories (y/n) [n]: y
     > Project name: NeuroPlot
@@ -41,7 +41,7 @@ It will ask you several questions. You can give the following answer:
 
 This ``latter`` command will initialize your documentation. You should get something like that:
 
-.. code-block::
+.. code-block:: text
 
     docs
     ├── _static
@@ -56,14 +56,14 @@ You will find in there the content of the home page of your documentation.
 
 To prove it to you, we will build our documentation:
 
-.. code-block::
+.. code-block::  bash
 
     make html
 
 You should now have some contents in the ``_build`` folder. There are *html* files inside. To read them
 we will open the documentation locally with our web browser:
 
-.. code-block::
+.. code-block:: bash
 
     python -m http.server 8888 --directory '_build/html'
 
@@ -80,7 +80,7 @@ for the first time! We will now :doc:`customize it <configure>`.
     We will build the documentation many times locally. So, in order not to have to run every time the
     ``python -m http.server`` command, you can open another terminal, run:
 
-    .. code-block::
+    .. code-block:: bash
         
         cd docs
         python -m http.server 8888 --directory '_build/html'
@@ -95,3 +95,12 @@ for the first time! We will now :doc:`customize it <configure>`.
 
     The command ``make html`` is defined in the ``Makefile``. It is a convenient alias for the command
     ``sphinx-build -M html . _build``.
+
+-----
+
+.. admonition:: If you don't manage to run the tutorial
+    :class: important
+
+    .. code-block:: bash
+
+        git reset --hard da8cd18eb135f909244f70a7d4f6f9e0dff45a3c

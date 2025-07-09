@@ -1,4 +1,5 @@
-# Writing docstrings
+Writing docstrings
+==================
 
 The very first step to document a Python project is to write **docstrings**.
 

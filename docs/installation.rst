@@ -1,6 +1,6 @@
 Installation
 ============
 
-.. code-block::
+.. code-block:: bash
 
     pip install neuroplot

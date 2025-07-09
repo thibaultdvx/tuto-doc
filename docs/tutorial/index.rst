@@ -4,11 +4,13 @@ Documentation tutorial
 Dev meeting, July 2025.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :numbered:
    
    sphinx
+   write
    configure
+   api/index
 
 Introduction
 ------------
@@ -23,6 +25,8 @@ It will give credit to your projects, and greatly facilitate collaboration and
 handover to new PhDs.
 
 Let's get started!
+
+.. _documentation-overview:
 
 Overview of a documentation
 ***************************
@@ -103,7 +107,7 @@ The repository of ``neuroplot`` is available `here <https://github.com/aramis-la
 The first step of the tutorial is to **fork the repository**, and then to **clone it**.
 Then checkout to the ``code`` branch, and create a new branch from the latter:
 
-.. code-block::
+.. code-block:: bash
 
     git checkout code
     git checkout -b tutorial
@@ -113,7 +117,7 @@ to Python, and there is nothing related to documentation.
 
 The Python architecture of the project is very simple and looks like this:
 
-.. code-block::
+.. code-block:: text
 
     src/neuroplot
     ├── __init__.py
@@ -138,20 +142,20 @@ Create your environment
 You know the recipe: when you start working with a new project, it is highly encouraged
 to create a new Python environment. To do that, put yourself in the ``tuto-doc`` folder, and run:
 
-.. code-block::
+.. code-block:: bash
 
     conda env create -f environment.yml
     conda activate tuto-doc
 
 Then, install the required dependencies with ``poetry``:
 
-.. code-block::
+.. code-block:: bash
 
     poetry install
 
 .. dropdown:: Install ``poetry`` on macOS
 
-    .. code-block::
+    .. code-block:: bash
 
         brew install pipx
         pipx ensurepath
@@ -159,7 +163,7 @@ Then, install the required dependencies with ``poetry``:
 
 Check that everything is working by running:
 
-.. code-block::
+.. code-block:: bash
 
     poetry run pytest tests/unittests
 
@@ -173,8 +177,6 @@ So far, so good? Great! Let's get into the nitty-gritty, starting with :doc:`ins
     For example, if you don't manage to finish :doc:`step 1 <sphinx>`, this will lead you to the
     expected result:
 
-    .. code-block::
+    .. code-block:: bash
 
-        git checkout da8cd18eb135f909244f70a7d4f6f9e0dff45a3c
-
-
+        git checkout --hard da8cd18eb135f909244f70a7d4f6f9e0dff45a3c
