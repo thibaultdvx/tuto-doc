@@ -2,7 +2,7 @@ import numpy as np
 import pytest
 import torchio as tio
 
-from neuroplot.transforms import Noise, RescaleIntensity, ToOrientation
+from neuroplot.transforms import Noise, RescaleIntensity
 
 X = tio.ScalarImage(tensor=np.random.randn(1, 3, 4, 5))
 
@@ -12,7 +12,6 @@ X = tio.ScalarImage(tensor=np.random.randn(1, 3, 4, 5))
     [
         (Noise, {"mean": 1, "std": 0.25}),
         (RescaleIntensity, {"out_min_max": (0, 2), "percentiles": (0.1, 0.9)}),
-        (ToOrientation, {"orientation": "LPS"}),
     ],
 )
 def test_transforms(transform_class, args):
