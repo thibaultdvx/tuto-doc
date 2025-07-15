@@ -17,7 +17,10 @@ class SinglePlot:
         title: Optional[str] = None,
     ) -> None:
         self.axes, self.slices = self._check_axes_and_slices(axes, slices)
-        self.transforms = tio.Compose(transforms) if transforms else lambda x: x
+        if transforms is None:
+            transforms = []
+        transforms = [tio.ToCanonical()] + transforms
+        self.transforms = tio.Compose(transforms)
         self.figsize = figsize
         self.title = title
 

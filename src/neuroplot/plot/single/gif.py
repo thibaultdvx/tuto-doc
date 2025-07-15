@@ -10,7 +10,8 @@ class GIF:
         assert duration > 0, "'duration' must be a positive float (in second)."
         self.axis = axis
         self.duration = duration
+        self.reorient = tio.ToCanonical()
 
     def create(self, img_path: Union[str, Path], gif_path: Union[str, Path]) -> None:
-        image = tio.ScalarImage(path=img_path)
+        image = self.reorient(tio.ScalarImage(path=img_path))
         image.to_gif(axis=self.axis, duration=self.duration, output_path=gif_path)
