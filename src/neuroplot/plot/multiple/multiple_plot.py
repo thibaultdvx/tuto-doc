@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import Union
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,7 +12,7 @@ class MultiplePlot(SinglePlot):
     def plot(  # pylint: disable=arguments-differ
         self,
         show: bool = True,
-        **kwargs: Union[str, Path],
+        **kwargs: str | Path,
     ) -> Figure:
         images: dict[str, tio.ScalarImage] = {
             name: self.transforms(tio.ScalarImage(path=path)).numpy().squeeze(0)
