@@ -1,5 +1,4 @@
 from pathlib import Path
-from typing import Union
 
 import torchio as tio
 
@@ -12,6 +11,6 @@ class GIF:
         self.duration = duration
         self.reorient = tio.ToCanonical()
 
-    def create(self, img_path: Union[str, Path], gif_path: Union[str, Path]) -> None:
+    def create(self, img_path: str | Path, gif_path: str | Path) -> None:
         image = self.reorient(tio.ScalarImage(path=img_path))
         image.to_gif(axis=self.axis, duration=self.duration, output_path=gif_path)

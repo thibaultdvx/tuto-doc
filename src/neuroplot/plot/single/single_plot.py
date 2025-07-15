@@ -1,5 +1,5 @@
 from pathlib import Path
-from typing import Callable, Optional, Sequence, Union
+from typing import Callable, Sequence
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -10,11 +10,11 @@ from matplotlib.figure import Figure
 class SinglePlot:
     def __init__(
         self,
-        axes: Optional[Union[int, Sequence[int]]] = None,
-        slices: Optional[Union[int, Sequence[int]]] = None,
-        transforms: Optional[Sequence[Callable[[np.ndarray], np.ndarray]]] = None,
-        figsize: Optional[tuple[float, float]] = None,
-        title: Optional[str] = None,
+        axes: int | Sequence[int] | None = None,
+        slices: int | Sequence[int] | None = None,
+        transforms: Sequence[Callable[[np.ndarray], np.ndarray]] | None = None,
+        figsize: tuple[float, float] | None = None,
+        title: str | None = None,
     ) -> None:
         self.axes, self.slices = self._check_axes_and_slices(axes, slices)
         if transforms is None:
@@ -24,12 +24,12 @@ class SinglePlot:
         self.figsize = figsize
         self.title = title
 
-    def set_title(self, title: Optional[str]) -> None:
+    def set_title(self, title: str | None) -> None:
         self.title = title
 
     def plot(
         self,
-        img_path: Union[str, Path],
+        img_path: str | Path,
         show: bool = True,
     ) -> Figure:
         image = tio.ScalarImage(path=img_path)
@@ -55,9 +55,9 @@ class SinglePlot:
 
     @staticmethod
     def _check_axes_and_slices(
-        axes: Optional[Union[int, Sequence[int]]],
-        slices: Optional[Union[int, Sequence[int]]],
-    ) -> tuple[Sequence[int], Optional[Sequence[int]]]:
+        axes: int | Sequence[int] | None,
+        slices: int | Sequence[int] | None,
+    ) -> tuple[Sequence[int], Sequence[int] | None]:
         if axes is None:
             axes = [0, 1, 2]
         elif isinstance(axes, int):
