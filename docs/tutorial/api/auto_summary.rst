@@ -3,8 +3,8 @@ Going further with ``autosummary``
 
 To recap:
 
-- we have a first draft for API Reference, but it is messy;
-- to improve it, we would like all the classes/functions of library to have their own
+- we have a first draft for our API Reference, but it is messy;
+- to improve it, we would like all the classes/functions of the library to have their own
   documentation pages;
 - but we don't want to create all the pages manually.
 
@@ -77,7 +77,7 @@ can take care of this:
 Improvements
 ------------
 
-With classes both from ``neuroplot.plot`` and ``neuroplot.transforms``, I feel like we are mixing up apples and pears.
+With classes from both ``neuroplot.plot`` and ``neuroplot.transforms`` on the same page, I feel like we are mixing up apples and pears.
 Let's rather build an ``autosummary`` for each module independently:
 
 1. Create a ``docs/api/plot.rst`` file, dedicated to ``neuroplot.plot``:
@@ -156,6 +156,14 @@ Let's rather build an ``autosummary`` for each module independently:
             
             plot
             transforms
+
+4. Build the documentation!
+
+That's it! We have finished our API Reference, and therefore our documentation! It certainly doesn't look complete,
+but this is only because we still have many docstrings to write. But I hope you got the idea!
+
+Finally, now that our documentation is finished, we must :doc:`deploy it <../deploy/index>` so that
+it is publicly available.
 
 -----
 
