@@ -8,7 +8,7 @@
 .. autosummary::
    :toctree: generated/
    :nosignatures:
-   :template: class.rst
+   :template: autosummary/class.rst
 
    Noise
    RescaleIntensity
