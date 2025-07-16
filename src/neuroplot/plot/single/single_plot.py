@@ -25,7 +25,7 @@ class SinglePlot:
         The slice to plot for each axis. If ``None``, the middle slice will be plotted. Otherwise, the **number
         of slices passed must be equal to the number of plotted axes** (equal to :math:`3` if ``axes=None``).
     transforms : Sequence[Callable[[np.ndarray], np.ndarray]] | None, default=None
-        Potential transforms to apply to the image before plotting.
+        Potential transforms to apply to the image before plotting. See :py:mod:`neuroplot.transforms`.
 
         .. important::
             No matter the transforms passed, the image will first be reoriented to the **RAS+** coordinate system.
