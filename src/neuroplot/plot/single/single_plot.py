@@ -11,10 +11,10 @@ class SinglePlot:
     """
     To plot a single neuroimage.
 
-    2D slices will be plotted via the method :py:meth:`plot`. The user can choose which anatomical axes to plot,
+    2D slices will be plotted via the method :py:meth:`~SinglePlot.plot`. The user can choose which anatomical axes to plot,
     and which slice to plot along the axes.
 
-    The title of the figure can be changed between plots using :py:meth:`set_title`.
+    The title of the figure can be changed between plots using :py:meth:`~SinglePlot.set_title`.
 
     Parameters
     ----------
