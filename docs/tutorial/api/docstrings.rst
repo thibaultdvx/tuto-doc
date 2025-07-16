@@ -3,13 +3,13 @@ Writing docstrings
 
 The very first step to properly document a Python project is to write **docstrings**.
 
-To do that, I recommend the very useful VSCode extension [autodocstring](https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring).
+To do that, I recommend the very useful VSCode extension `autoDocstring <https://marketplace.visualstudio.com/items?itemName=njpwerner.autodocstring>`_.
 It will automatically generate the structure of your docstring, and add type hints and default values to it.
 
 In VSCode settings (``⌘,`` on macOS), you can choose a docstring template among the most commons (``numpy``, ``google``, etc.).
 You can also create your own template.
 
-To have a a final documentation consistent with the preview that you saw at the beginning of the tutorial, I suggest
+To have a final documentation consistent with the preview that you saw at the beginning of the tutorial, I suggest
 that you add the following docstrings to ``neuroplot/plot/single/single_plot.py``:
 
 .. dropdown:: ``neuroplot/plot/single/single_plot.py``
@@ -217,10 +217,19 @@ Some comments on these docstrings:
 
 - Personally, I often choose only to document well the public functions/methods. For the private ones, I keep
   it very concise.
-- The first line of the docstring is the **short summary**: one sentence to describe the function. Then, the **extended summary**
+- The first line(s) of the docstring is the **short summary**: one sentence to describe the function. Then, the **extended summary**
   is used to clarify the functionalities.
-- You can see here the most important sections that you will find in a docstrings: ``Parameters``, ``Returns``, ``Raises``,
+- You can see here the most important sections that you will find in a docstring: ``Parameters``, ``Returns``, ``Raises``,
   and ``Examples``. You may also come across the ``See Also``, ``Notes``, or ``References`` sections.
-- You can find details and docstrings good practices `here <https://numpydoc.readthedocs.io/en/stable/format.html>`_.
+- You can find details and docstring good practices `here <https://numpydoc.readthedocs.io/en/stable/format.html>`_.
 - Some elements of the docstrings, like ``:py:meth:`` or ``:py:func:``, may be strange to you. These are Sphinx tools
   to handle cross and external references. It will get clear in the :doc:`next section <parse_docstrings>`.
+
+-----
+
+.. admonition:: If you don't manage to run the tutorial
+    :class: important
+
+    .. code-block:: bash
+
+        git reset --hard d8299088836b52d005fcff9a3fb3488bdf778aab
