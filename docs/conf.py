@@ -23,6 +23,8 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
+    "sphinx_gallery.gen_gallery",
+    "sphinxcontrib.bibtex",
 ]
 
 templates_path = ["_templates"]
@@ -35,6 +37,19 @@ napoleon_custom_sections = [("Returns", "params_style")]
 intersphinx_mapping = {
     "matplotlib": ("https://matplotlib.org/stable/", None),
 }
+
+from pathlib import Path
+
+sphinx_gallery_conf = {
+    "examples_dirs": "../examples",
+    "gallery_dirs": "auto_examples",
+    "backreferences_dir": Path("api", "generated"),  # where mini-galleries are stored
+    "doc_module": (
+        "neuroplot",
+    ),  # generate mini-galleries for all the objects in clinicadl
+}
+
+bibtex_bibfiles = ["references.bib"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

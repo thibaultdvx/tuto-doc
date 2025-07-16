@@ -750,6 +750,18 @@ files = [
 ]
 
 [[package]]
+name = "latexcodec"
+version = "3.0.1"
+description = "A lexer and codec to work with LaTeX code in Python."
+optional = false
+python-versions = ">=3.9"
+groups = ["docs"]
+files = [
+    {file = "latexcodec-3.0.1-py3-none-any.whl", hash = "sha256:a9eb8200bff693f0437a69581f7579eb6bca25c4193515c09900ce76451e452e"},
+    {file = "latexcodec-3.0.1.tar.gz", hash = "sha256:e78a6911cd72f9dec35031c6ec23584de6842bfbc4610a9678868d14cdfb0357"},
+]
+
+[[package]]
 name = "markdown-it-py"
 version = "3.0.0"
 description = "Python port of markdown-it. Markdown parsing, done right!"
@@ -1345,7 +1357,7 @@ version = "11.3.0"
 description = "Python Imaging Library (Fork)"
 optional = false
 python-versions = ">=3.9"
-groups = ["main"]
+groups = ["main", "docs"]
 files = [
     {file = "pillow-11.3.0-cp310-cp310-macosx_10_10_x86_64.whl", hash = "sha256:1b9c17fd4ace828b3003dfd1e30bff24863e0eb59b535e8f80194d9cc7ecf860"},
     {file = "pillow-11.3.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:65dc69160114cdd0ca0f35cb434633c75e8e7fad4cf855177a05bf38678f73ad"},
@@ -1495,6 +1507,42 @@ identify = ">=1.0.0"
 nodeenv = ">=0.11.1"
 pyyaml = ">=5.1"
 virtualenv = ">=20.10.0"
+
+[[package]]
+name = "pybtex"
+version = "0.25.1"
+description = "A BibTeX-compatible bibliography processor in Python"
+optional = false
+python-versions = ">=3.6"
+groups = ["docs"]
+files = [
+    {file = "pybtex-0.25.1-py2.py3-none-any.whl", hash = "sha256:9053b0d619409a0a83f38abad5d9921de5f7b3ede00742beafcd9f10ad0d8c5c"},
+    {file = "pybtex-0.25.1.tar.gz", hash = "sha256:9eaf90267c7e83e225af89fea65c370afbf65f458220d3946a9e3049e1eca491"},
+]
+
+[package.dependencies]
+latexcodec = ">=1.0.4"
+PyYAML = ">=3.01"
+
+[package.extras]
+doc = ["sphinx"]
+test = ["pytest"]
+
+[[package]]
+name = "pybtex-docutils"
+version = "1.0.3"
+description = "A docutils backend for pybtex."
+optional = false
+python-versions = ">=3.7"
+groups = ["docs"]
+files = [
+    {file = "pybtex-docutils-1.0.3.tar.gz", hash = "sha256:3a7ebdf92b593e00e8c1c538aa9a20bca5d92d84231124715acc964d51d93c6b"},
+    {file = "pybtex_docutils-1.0.3-py3-none-any.whl", hash = "sha256:8fd290d2ae48e32fcb54d86b0efb8d573198653c7e2447d5bec5847095f430b9"},
+]
+
+[package.dependencies]
+docutils = ">=0.14"
+pybtex = ">=0.16"
 
 [[package]]
 name = "pygments"
@@ -1981,6 +2029,31 @@ theme-rtd = ["sphinx-rtd-theme (>=2.0,<3.0)"]
 theme-sbt = ["sphinx-book-theme (>=1.1,<2.0)"]
 
 [[package]]
+name = "sphinx-gallery"
+version = "0.19.0"
+description = "A Sphinx extension that builds an HTML gallery of examples from any set of Python scripts."
+optional = false
+python-versions = ">=3.8"
+groups = ["docs"]
+files = [
+    {file = "sphinx_gallery-0.19.0-py3-none-any.whl", hash = "sha256:4c28751973f81769d5bbbf5e4ebaa0dc49dff8c48eb7f11131eb5f6e4aa25f0e"},
+    {file = "sphinx_gallery-0.19.0.tar.gz", hash = "sha256:8400cb5240ad642e28a612fdba0667f725d0505a9be0222d0243de60e8af2eb3"},
+]
+
+[package.dependencies]
+pillow = "*"
+sphinx = ">=5"
+
+[package.extras]
+animations = ["sphinxcontrib-video"]
+dev = ["absl-py", "graphviz", "intersphinx-registry", "ipython", "joblib", "jupyterlite-sphinx (>=0.17.1)", "lxml", "matplotlib", "numpy", "packaging", "plotly", "pydata-sphinx-theme", "pytest", "pytest-coverage", "seaborn", "sphinxcontrib-video", "statsmodels"]
+jupyterlite = ["jupyterlite-sphinx"]
+parallel = ["joblib"]
+recommender = ["numpy"]
+show-api-usage = ["graphviz"]
+show-memory = ["memory-profiler"]
+
+[[package]]
 name = "sphinxcontrib-applehelp"
 version = "2.0.0"
 description = "sphinxcontrib-applehelp is a Sphinx extension which outputs Apple help books"
@@ -1996,6 +2069,27 @@ files = [
 lint = ["mypy", "ruff (==0.5.5)", "types-docutils"]
 standalone = ["Sphinx (>=5)"]
 test = ["pytest"]
+
+[[package]]
+name = "sphinxcontrib-bibtex"
+version = "2.6.5"
+description = "Sphinx extension for BibTeX style citations."
+optional = false
+python-versions = ">=3.9"
+groups = ["docs"]
+files = [
+    {file = "sphinxcontrib_bibtex-2.6.5-py3-none-any.whl", hash = "sha256:455ea4509642ea0b28ede3721550273626f85af65af01f161bfd8e19dc1edd7d"},
+    {file = "sphinxcontrib_bibtex-2.6.5.tar.gz", hash = "sha256:9b3224dd6fece9268ebd8c905dc0a83ff2f6c54148a9235fe70e9d1e9ff149c0"},
+]
+
+[package.dependencies]
+docutils = ">=0.8,<0.18.dev0 || >=0.20.dev0"
+pybtex = ">=0.25"
+pybtex-docutils = ">=1.0.0"
+Sphinx = ">=3.5"
+
+[package.extras]
+test = ["pytest", "pytest-cov", "sphinx-autoapi"]
 
 [[package]]
 name = "sphinxcontrib-devhelp"
@@ -2398,4 +2492,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12,<3.13"
-content-hash = "c18437840772165a20363373816ed0a44d10593fdc3d1d8ab0df56889b07ccc2"
+content-hash = "27d5688544f8ca0175b6a18b5f7e2a558c7fd1da9b651eb26e3968a7ecb01e51"
