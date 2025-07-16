@@ -16,6 +16,8 @@ class SinglePlot:
 
     The title of the figure can be changed between plots using :py:meth:`set_title`.
 
+    Just a random reference to :footcite:t:`Harris:2020`. And another to Matplotlib\\ :footcite:`Hunter:2007`.
+
     Parameters
     ----------
     axes : int | Sequence[int] | None, default=None
@@ -63,6 +65,10 @@ class SinglePlot:
     --------
     :py:class:`neuroplot.plot.multiple.MultiplePlot`
         To plot multiple neuroimages in a grid of subplots.
+
+    References
+    ----------
+    .. footbibliography::
     """
 
     def __init__(

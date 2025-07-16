@@ -24,6 +24,7 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
     "sphinx_gallery.gen_gallery",
+    "sphinxcontrib.bibtex",
 ]
 
 templates_path = ["_templates"]
@@ -47,6 +48,8 @@ sphinx_gallery_conf = {
         "neuroplot",
     ),  # generate mini-galleries for all the objects in neuroplot
 }
+
+bibtex_bibfiles = ["references.bib"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
