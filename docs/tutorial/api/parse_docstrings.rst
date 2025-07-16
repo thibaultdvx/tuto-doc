@@ -1,5 +1,5 @@
-Parsing docstrings
-==================
+Parsing docstrings with Sphinx
+==============================
 
 One key functionality of Sphinx is that it can build automatically
 the API Reference from docstrings. Let's do it step by step!
