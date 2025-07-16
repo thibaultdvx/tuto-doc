@@ -225,6 +225,20 @@ Some comments on these docstrings:
 - Some elements of the docstrings, like ``:py:meth:`` or ``:py:func:``, may be strange to you. These are Sphinx tools
   to handle cross and external references. It will get clear in the :doc:`next section <parse_docstrings>`.
 
+Finally, it's probably less familiar to you, but you can also add docstrings at the beginning of your python files,
+or your modules. For example, put in ``neuroplot/plot/single/__init__.py``:
+
+.. dropdown:: ``neuroplot/plot/single/__init__.py``
+
+    .. code-block:: python
+
+        """Tools to visualize a single 3D neuroimage."""
+
+        from .gif import GIF
+        from .single_plot import SinglePlot
+
+We will see in the :doc:`next section <parse_docstrings>` how this docstring will be used.
+
 -----
 
 .. admonition:: If you don't manage to run the tutorial
