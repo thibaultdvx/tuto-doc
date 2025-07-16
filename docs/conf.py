@@ -18,11 +18,22 @@ extensions = [
     "sphinx_design",
     "sphinx_copybutton",
     "myst_parser",
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.viewcode",
 ]
 
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
+autodoc_inherit_docstrings = False
+
+napoleon_custom_sections = [("Returns", "params_style")]
+
+intersphinx_mapping = {
+    "matplotlib": ("https://matplotlib.org/stable/", None),
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
