@@ -1,15 +1,11 @@
 API Reference
 =============
 
-:mod:`neuroplot.plot`: Plotting neuroimages
--------------------------------------------
+``neuroplot.plot``: Plotting neuroimages
+----------------------------------------
 
-.. automodule:: neuroplot.plot
-
-:mod:`neuroplot.plot.single`
-****************************
-
-.. automodule:: neuroplot.plot.single
+``neuroplot.plot.single``
+*************************
 
 .. currentmodule:: neuroplot.plot.single
 
@@ -19,20 +15,16 @@ API Reference
 .. autoclass:: GIF
     :members:
 
-:mod:`neuroplot.plot.multiple`
-******************************
-
-.. automodule:: neuroplot.plot.multiple
+``neuroplot.plot.multiple``
+***************************
 
 .. currentmodule:: neuroplot.plot.multiple
 
 .. autoclass:: MultiplePlot
     :members:
 
-:mod:`neuroplot.transforms`: Transforming images before plotting
-----------------------------------------------------------------
-
-.. automodule:: neuroplot.transforms
+``neuroplot.transforms``: Transforming images before plotting
+-------------------------------------------------------------
 
 .. currentmodule:: neuroplot.transforms
 
@@ -41,4 +33,3 @@ API Reference
 
 .. autoclass:: RescaleIntensity
     :members:
-
