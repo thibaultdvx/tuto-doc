@@ -64,7 +64,7 @@ class SinglePlot:
             axes = [axes]
 
         if slices is None:
-            n_slices = 3
+            n_slices = len(axes)
         elif isinstance(slices, int):
             n_slices = 1
             slices = [slices]
