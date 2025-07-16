@@ -103,16 +103,17 @@ Today's tutorial
 Now that you have all the required knowledge to start the tutorial, let's introduce our use case.
 
 We will work on a toy Python library, called ``neuroplot``, focused on neuroimaging data visualization.
-This library is functional, and you can see some usage examples in the :doc:`example section <auto_examples/index>`,
-but currently it is poorly documented (they aren't even docstrings!). Our goal is thus to publish a documentation from
-scratch!
+This library is functional, and you can see some usage examples in the :doc:`example section <../auto_examples/index>`,
+but we will start from a checkpoint when there was no documentation at all (not even docstrings!).
+Our goal is thus to publish a documentation from scratch!
 
 Clone the repo
 **************
 
 The repository of ``neuroplot`` is available `here <https://github.com/aramis-lab/tuto-doc>`_.
 
-The first step of the tutorial is to **fork the repository**, and then to **clone it**.
+The first step of the tutorial is to **fork the repository** (make sure you fork all the branches
+by unchecking the box "Copy the main branch only"), and then to **clone it**.
 Then checkout to the ``code`` branch, and create a new branch from the latter:
 
 .. code-block:: bash
