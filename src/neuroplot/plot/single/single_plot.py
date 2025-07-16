@@ -42,7 +42,6 @@ class SinglePlot:
 
     Examples
     --------
-
     .. code-block:: python
 
         from neuroplot.plot.single import SinglePlot
