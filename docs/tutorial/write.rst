@@ -106,4 +106,4 @@ look at how to :doc:`configure our documentation <configure>`.
 
     .. code-block:: bash
 
-        git reset --hard 8cb1dc2fe427c2f43e036b8faa99da3cca9addf5
+        git reset --hard 374c2cdc847a93a43b0d7a1016d9c3664152c87d

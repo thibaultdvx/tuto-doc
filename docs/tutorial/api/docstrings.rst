@@ -226,7 +226,15 @@ Some comments on these docstrings:
   to handle cross and external references. It will get clear in the :doc:`next section <parse_docstrings>`.
 
 Finally, it's probably less familiar to you, but you can also add docstrings at the beginning of your python files,
-or your modules. For example, put in ``neuroplot/plot/single/__init__.py``:
+or your modules. For example, put in ``neuroplot/plot/__init__.py``:
+
+.. dropdown:: ``neuroplot/plot/__init__.py``
+
+    .. code-block:: python
+
+        """Tools to visualize neuroimages."""
+
+And in ``neuroplot/plot/single/__init__.py``:
 
 .. dropdown:: ``neuroplot/plot/single/__init__.py``
 
@@ -246,4 +254,4 @@ We will see in the :doc:`next section <parse_docstrings>` how this docstring wil
 
     .. code-block:: bash
 
-        git reset --hard d8299088836b52d005fcff9a3fb3488bdf778aab
+        git reset --hard 467aef993ac527e1e6307c9cc626cf3e32d18cef
