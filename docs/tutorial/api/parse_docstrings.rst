@@ -56,6 +56,9 @@ What just happened?
 1. We told Sphinx where to find the class we want to document with ``.. currentmodule::``.
 2. We told Sphinx to generate a documentation from the docstrings of ``SinglePlot`` with ``.. autoclass::``.
 
+.. note::
+    If it was a function to document, we would use ``.. autofunction::``.
+
 But you may have noticed that we miss the methods of ``SinglePlot``. To fix this issue, just add
 the ``:members:`` command:
 
@@ -77,7 +80,7 @@ the ``:members:`` command:
         .. autoclass:: SinglePlot
             :members:
 
-Ok, now let's do it for all the classes of our ``neuroplot`` package:
+If you remember well, we also put docstrings in some ``__init__.py`` files. To include them in the documentation, use ``.. automodule::``:
 
 .. dropdown:: ``docs/api/index.rst``
 
@@ -89,8 +92,40 @@ Ok, now let's do it for all the classes of our ``neuroplot`` package:
         ``neuroplot.plot``: Plotting neuroimages
         ----------------------------------------
 
+        .. automodule:: neuroplot.plot
+
         ``neuroplot.plot.single``
         *************************
+
+        .. automodule:: neuroplot.single.plot
+
+        .. currentmodule:: neuroplot.plot.single
+
+        .. autoclass:: SinglePlot
+            :members:
+
+.. note::
+    If may seem superfluous to include docstrings for modules. But even if you think that, it is still
+    important to use ``.. automodule::`` because it will enable you to refer to this module anywhere via ``:py:mod:``.
+
+Ok, now let's build the API Reference for the whole ``neuroplot`` package:
+
+.. dropdown:: ``docs/api/index.rst``
+
+    .. code-block:: rst
+
+        API Reference
+        =============
+
+        ``neuroplot.plot``: Plotting neuroimages
+        ----------------------------------------
+
+        .. automodule:: neuroplot.plot
+
+        ``neuroplot.plot.single``
+        *************************
+
+        .. automodule:: neuroplot.plot.single
 
         .. currentmodule:: neuroplot.plot.single
 
@@ -103,6 +138,8 @@ Ok, now let's do it for all the classes of our ``neuroplot`` package:
         ``neuroplot.plot.multiple``
         ***************************
 
+        .. automodule:: neuroplot.plot.multiple
+
         .. currentmodule:: neuroplot.plot.multiple
 
         .. autoclass:: MultiplePlot
@@ -110,6 +147,8 @@ Ok, now let's do it for all the classes of our ``neuroplot`` package:
 
         ``neuroplot.transforms``: Transforming images before plotting
         -------------------------------------------------------------
+
+        .. automodule:: neuroplot.transforms
 
         .. currentmodule:: neuroplot.transforms
 
@@ -121,9 +160,6 @@ Ok, now let's do it for all the classes of our ``neuroplot`` package:
 
 .. note::
     The other classes don't have docstrings yet, that's why their documentation is empty!
-
-.. note::
-    If there was a function to document, we would use ``.. autofunction::``.
 
 We reached our goal, but currently the API Reference is not very legible. Let's use Sphinx
 tools to improve it.
@@ -161,7 +197,8 @@ To use it, simply add it in your ``conf.py``:
 
 Have you noticed that when you click on ``plot()`` in "2D slices will be plotted via the method ``plot()``." in the documentation
 of ``SinglePlot``, it will redirect you to the documentation of the ``plot`` method. The same goes for the mention of
-``neuroplot.plot.multiple.MultiplePlot`` in the ``See Also`` section. This is a great functionality offered by ``autodoc`` that
+``neuroplot.plot.multiple.MultiplePlot`` in the ``See Also`` section, as well as ``neuroplot.transforms`` in the description of
+``transforms`` parameter. This is a great functionality offered by ``autodoc`` that
 will enable you to cross-reference across your documentation.
 
 But what about external references? For example, I would like ``matplotlib.pyplot.figure()`` (in the description of ``figsize``

@@ -43,7 +43,7 @@ that you add the following docstrings to ``neuroplot/plot/single/single_plot.py`
                 The slice to plot for each axis. If ``None``, the middle slice will be plotted. Otherwise, the **number
                 of slices passed must be equal to the number of plotted axes** (equal to :math:`3` if ``axes=None``).
             transforms : Sequence[Callable[[np.ndarray], np.ndarray]] | None, default=None
-                Potential transforms to apply to the image before plotting.
+                Potential transforms to apply to the image before plotting. See :py:mod:`neuroplot.transforms`.
 
                 .. important::
                     No matter the transforms passed, the image will first be reoriented to the **RAS+** coordinate system.
@@ -222,7 +222,7 @@ Some comments on these docstrings:
 - You can see here the most important sections that you will find in a docstring: ``Parameters``, ``Returns``, ``Raises``,
   and ``Examples``. You may also come across the ``See Also``, ``Notes``, or ``References`` sections.
 - You can find details and docstring good practices `here <https://numpydoc.readthedocs.io/en/stable/format.html>`_.
-- Some elements of the docstrings, like ``:py:meth:`` or ``:py:func:``, may be strange to you. These are Sphinx tools
+- Some elements of the docstrings, like ``:py:meth:``, ``:py:mod:``, or ``:py:func:``, may be strange to you. These are Sphinx tools
   to handle cross and external references. It will get clear in the :doc:`next section <parse_docstrings>`.
 
 Finally, it's probably less familiar to you, but you can also add docstrings at the beginning of your python files,
@@ -245,7 +245,7 @@ And in ``neuroplot/plot/single/__init__.py``:
         from .gif import GIF
         from .single_plot import SinglePlot
 
-We will see in the :doc:`next section <parse_docstrings>` how this docstring will be used.
+We will see in the :doc:`next section <parse_docstrings>` how these docstrings will be used.
 
 -----
 
