@@ -86,5 +86,4 @@ main drawback: **there can be only one version of your documentation**. More pre
 It can be a real handicap if you plan to maintain your package regularly, because the users won't
 use necessarily the latest version of your code.
 
-That's why GitHub Pages is not used by common Python libraries, which have turned instead to
-:doc:`Read the Docs <read_the_docs>`.
+A great alternative that handles versioning is :doc:`Read the Docs <read_the_docs>`.

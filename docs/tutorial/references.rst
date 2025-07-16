@@ -1,0 +1,2 @@
+Manage references with Sphinx
+=============================
