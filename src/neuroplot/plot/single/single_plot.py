@@ -40,7 +40,6 @@ class SinglePlot:
     AssertionError
         If the number of slices passed is not equal to the number of plotted axes.
 
-
     Examples
     --------
 
