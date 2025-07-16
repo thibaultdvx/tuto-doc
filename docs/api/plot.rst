@@ -3,7 +3,6 @@
 
 .. automodule:: neuroplot.plot
 
-
 ``neuroplot.plot.single``
 -------------------------
 
