@@ -5,3 +5,5 @@
 
 .. autoclass:: {{ objname }}
    :members:
+
+.. include:: {{fullname}}.examples
