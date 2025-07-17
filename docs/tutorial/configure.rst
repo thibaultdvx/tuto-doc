@@ -4,7 +4,7 @@ Configure your Sphinx documentation
 Ok, now we want to customize/configure our Sphinx documentation.
 The ``docs/conf.py`` file play a crucial role. Have a look at it!
 
-It is a Python file, so it can definitely contain Python logic, however
+It is a Python file, so it can definitely contain Python logic. However
 it is mostly use to define some variables. For example, the theme is
 associated with the variable ``html_theme``. Let's change its value to
 see what happens.
@@ -12,7 +12,7 @@ see what happens.
 Change the theme
 ----------------
 
-We will try to substitute the basic with a prettier one. We choose the `furo theme <https://github.com/pradyunsg/furo>`_.
+We will try to substitute the basic theme with a prettier one. We choose the `furo theme <https://github.com/pradyunsg/furo>`_.
 
 First, we need to install it:
 

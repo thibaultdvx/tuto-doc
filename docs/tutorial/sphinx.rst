@@ -69,7 +69,9 @@ we will open the documentation locally with our web browser:
     python -m http.server 8888 --directory '_build/html'
 
 An then open http://localhost:8888/ in your web browser. You should be able to see your documentation
-for the first time! We will now :doc:`customize it <configure>`.
+for the first time!
+
+But it is empty, let's :doc:`fill it <write>`!
 
 .. warning::
 

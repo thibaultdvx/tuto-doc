@@ -46,7 +46,7 @@ to document.
 
 To begin, let's take inspiration from the community. Among other well known
 Python libraries, you are probably already familiar with `scikit-learn documentation <https://scikit-learn.org/stable/>`_,
-or `numpy's <ttps://numpy.org/doc/stable>`_. Another that often inspires me in
+or `numpy's <https://numpy.org/doc/stable>`_. Another that often inspires me in
 `niilearn's <https://nilearn.github.io/stable>`_.
 
 Even if these documentations differ on some points, we can see common patterns. More precisely,
@@ -154,7 +154,7 @@ to create a new Python environment. To do that, run:
 
 .. code-block:: bash
 
-    conda env create -f environment.yml
+    conda env create -f environment.yml -k
     conda activate tuto-doc
 
 Then, install the required dependencies with ``poetry``:
