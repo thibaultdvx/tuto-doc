@@ -20,6 +20,7 @@ Dev meeting, July 2025.
    examples
    glossary
    references
+   ext_links
 
 Introduction
 ------------
