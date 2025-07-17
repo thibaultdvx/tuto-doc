@@ -70,3 +70,5 @@ NeuroPlot is a Python library for plotting neuroimaging data.
     :hidden:
 
     tutorial/index
+
+Version 0.1.0
