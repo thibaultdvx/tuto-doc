@@ -47,7 +47,7 @@ sphinx_gallery_conf = {
     "backreferences_dir": Path("api", "generated"),  # where mini-galleries are stored
     "doc_module": (
         "neuroplot",
-    ),  # generate mini-galleries for all the objects in clinicadl
+    ),  # generate mini-galleries for all the objects in neuroplot
 }
 
 bibtex_bibfiles = ["references.bib"]
