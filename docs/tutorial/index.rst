@@ -45,30 +45,30 @@ Let's define the scope of this tutorial: we have a **Python API** that we want
 to document.
 
 To begin, let's take inspiration from the community. Among other well known
-Python libraries, you've probably already to `scikit-learn documentation <https://scikit-learn.org/stable/>`_,
+Python libraries, you are probably already familiar with `scikit-learn documentation <https://scikit-learn.org/stable/>`_,
 or `numpy's <ttps://numpy.org/doc/stable>`_. Another that often inspires me in
 `niilearn's <https://nilearn.github.io/stable>`_.
 
 Even if these documentations differ on some points, we can see common patterns. More precisely,
 there are some sections that you will often find in an API documentation:
 
-- An ``installation`` section: the first and most fundamental section with instructions to
+- An ``Installation`` section: the first and most fundamental section with instructions to
   install the package properly.
-- A ``getting started`` section: a quick overview of the main features of your package. This is where your "sell" your project!
-- ``examples``: concrete examples that the user should be able to run on his own.
-- A ``user guide``: a section where you present in details all the features of the package.
+- A ``Getting Started`` section: a quick overview of the main features of your package. It is where your "sell" your project!
+- ``Examples``: concrete examples that the user should be able to run on his own.
+- A ``User Guide``: a section where you present in details all the features of the package.
   All the well know Python projects have an exhaustive user guide, but this section is
   really time-consuming to work, so I think it shouldn't be your priority.
 - An ``API Reference``: a section where you document the public Python objects of your API
   (e.g. your functions and the parameters that they take). We will see that this section is
   really easy to build from your docstrings.
-- A ``contribution guide``: if you want to encourage people to contribute to your project.
+- A ``Contribution Guide``: if you want to encourage people to contribute to your project.
 
 .. note::
 
-    I you ask me what is the priority, I would say that an ``installation`` section, a ``getting started`` section,
-    and an ``API Reference`` are a good start. Secondly, I would feed the ``examples``. The ``contribution guide``
-    and particularly the ``user guide`` are a bit more time-consuming to write and are expected for more
+    If you ask me what is the priority, I would say that an ``Installation`` section, a ``Getting Started`` section,
+    and an ``API Reference`` are a good start. Secondly, I would feed the ``Examples``. The ``Contribution Guide``
+    and particularly the ``User Guide`` are a bit more time-consuming to write, and are only expected for more
     advanced project.
 
 Technical baggage to publish a documentation
@@ -82,7 +82,7 @@ To publish a documentation, there are three steps:
 
 Now that I've mentioned *html*, *css*, and *js*, I can see that you are afraid. Fortunately, modern tools
 take care of the nasty things and **build automatically** your website from the documentation that
-you have written in user-friendly format like `Markdown <https://www.markdownguide.org/>`_.
+you have written in a user-friendly format like `Markdown <https://www.markdownguide.org/>`_.
 
 Two popular tools are `Sphinx <https://www.sphinx-doc.org/en>`_ and `MkDocs <https://www.mkdocs.org/>`_.
 MkDocs is more than enough to build a documentation only from markdown files, but **in the case of
@@ -144,14 +144,13 @@ The Python architecture of the project is very simple and looks like this:
     └── transforms
         ├── __init__.py
         ├── noise.py
-        ├── rescale_intensity.py
-        └── to_orientation.py
+        └── rescale_intensity.py
 
 Create your environment
 ***********************
 
 You know the recipe: when you start working with a new project, it is highly encouraged
-to create a new Python environment. To do that, put yourself in the ``tuto-doc`` folder, and run:
+to create a new Python environment. To do that, run:
 
 .. code-block:: bash
 
@@ -190,4 +189,4 @@ So far, so good? Great! Let's get into the nitty-gritty, starting with :doc:`ins
 
     .. code-block:: bash
 
-        git checkout --hard da8cd18eb135f909244f70a7d4f6f9e0dff45a3c
+        git checkout --hard cdabe7a2d08df95d844c5f22dd00aa52afbf8ec6

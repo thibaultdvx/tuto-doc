@@ -33,17 +33,18 @@ It will ask you several questions. You can give the following answer:
 
 .. code-block:: text
 
-    > Separate source and build directories (y/n) [n]: y
+    > Separate source and build directories (y/n) [n]: n
     > Project name: NeuroPlot
     > Author name(s): ARAMIS Lab
     > Project release []: 0.1.0
     > Project language [en]: en
 
-This ``latter`` command will initialize your documentation. You should get something like that:
+This latter command will initialize your documentation. You should get something like that:
 
 .. code-block:: text
 
     docs
+    ├── _build
     ├── _static
     ├── _templates
     ├── conf.py
@@ -83,6 +84,7 @@ for the first time! We will now :doc:`customize it <configure>`.
     .. code-block:: bash
         
         cd docs
+        conda activate tuto-doc
         python -m http.server 8888 --directory '_build/html'
 
     and let it run in the background.

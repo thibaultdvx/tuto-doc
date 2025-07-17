@@ -2,8 +2,8 @@ Write documentation pages
 =========================
 
 Now that we have a functional documentation, we will fill it. As suggested in
-the :ref:`introduction <documentation-overview>`, we will add ``installation``, ``getting started``, 
-``user guide``, ``API Reference``, and ``contribution guide`` sections:
+the :ref:`introduction <documentation-overview>`, we will add ``Installation``, ``Getting Started``, 
+``User Guide``, ``API Reference``, and ``Contribution Guide`` sections:
 
 .. code-block:: bash
 
@@ -23,50 +23,50 @@ the :ref:`introduction <documentation-overview>`, we will add ``installation``, 
     manually.
 
 Have a look at your ``docs`` folder: ``.rst`` files are placed at the same level as your ``index.rst``. Besides, if you want
-a page with subpages (e.g. the ``user guide`` here), you will create a folder, with an ``index.rst`` inside.
+a page with subpages (e.g. the ``User Guide`` here), you will create a folder, with an ``index.rst`` inside.
 
 However, if you build the documentation (``make html``), you will not see any modification. The new pages are not visible
-in our documentation... But they have been built: for example, the ``installation`` page is accessible at http://localhost:8888/installation.html.
-This simply because we have to build a table of contents in our ``index.rst`` pages:
+in our documentation... But they have been built: for example, the ``Installation`` page is accessible at http://localhost:8888/installation.html.
+This simply because we have to feed the table of contents in our ``docs/index.rst`` pages:
 
-1. Change the content of ``index.rst`` with:
+1. Change the content of ``docs/index.rst`` with:
 
-    .. code-block:: rst
+.. code-block:: rst
 
-        NeuroPlot
-        =========
+    NeuroPlot
+    =========
 
-        NeuroPlot is a Python library for plotting neuroimaging data.
+    NeuroPlot is a Python library for plotting neuroimaging data.
 
-        .. toctree::
-            :maxdepth: 1
+    .. toctree::
+        :maxdepth: 1
 
-            installation
-            getting_started
-            user_guide/index
-            api/index
+        installation
+        getting_started
+        user_guide/index
+        api/index
 
-        .. toctree::
-            :caption: development
-            :maxdepth: 1
+    .. toctree::
+        :caption: development
+        :maxdepth: 1
 
-            contributing
-            GitHub <https://github.com/aramis-lab/tuto-doc>
+        contributing
+        GitHub <https://github.com/aramis-lab/tuto-doc>
 
 2. Change the content of ``user_guide/index.rst`` with:
 
-    .. code-block:: rst
+.. code-block:: rst
 
-        User Guide
-        ==========
+    User Guide
+    ==========
 
-        .. toctree::
-            :numbered:
+    .. toctree::
+        :numbered:
 
-            intro
-            plot
-            multiple_plots
-            gif
+        intro
+        plot
+        multiple_plots
+        gif
 
 3. Build the documentation.
 
