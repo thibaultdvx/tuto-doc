@@ -270,4 +270,4 @@ the answer... No! Sphinx offers another smart functionality: :doc:`autosummary <
 
     .. code-block:: bash
 
-        git reset --hard 44e6292a7410e0ee1798dddc0395c2599531436e
+        git reset --hard 692644e93d81de77e8451f5019a883b253321656

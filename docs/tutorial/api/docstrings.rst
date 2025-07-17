@@ -254,4 +254,4 @@ We will see in the :doc:`next section <parse_docstrings>` how these docstrings w
 
     .. code-block:: bash
 
-        git reset --hard 467aef993ac527e1e6307c9cc626cf3e32d18cef
+        git reset --hard 2fdec22493ac0e41dda6036d2f1482374b3d45d3

@@ -202,4 +202,4 @@ Our documentation looks great, but a central element is still missing the :doc:`
 
     .. code-block:: bash
 
-        git reset --hard 8f54d4b1fa266686c311f6915b5c746ae7ccaf34
+        git reset --hard 85031f317632af1eea7381c1f2dfdd461fd7c53c

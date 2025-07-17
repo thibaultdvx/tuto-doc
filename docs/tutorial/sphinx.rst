@@ -103,4 +103,4 @@ for the first time! We will now :doc:`customize it <configure>`.
 
     .. code-block:: bash
 
-        git reset --hard 7192fcc30cf3b9b50f7af5bd373d0852c798995a
+        git reset --hard cdabe7a2d08df95d844c5f22dd00aa52afbf8ec6

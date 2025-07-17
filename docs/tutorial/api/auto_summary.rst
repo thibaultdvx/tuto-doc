@@ -172,4 +172,4 @@ it is publicly available.
 
     .. code-block:: bash
 
-        git reset --hard 44e6292a7410e0ee1798dddc0395c2599531436e
+        git reset --hard 9a105d76b8119b0f96bbaef15b52a6ebb711d03e
