@@ -48,7 +48,7 @@ commits).
 
 ### To check that `doc` and `main` did not diverge
 
-`main` should contain the result of the tutorial. And `doc` contains the last checkpoint of the tutorial.
+`main` should contain the result of the tutorial, and `doc` contains the last checkpoint of the tutorial.
 So `doc` and `main` should be very close. The only differences should be in `docs/tutorial` and `docs/index.rst`.
 
 To make sure that they have not diverged, use: `git diff --name-only main doc`
