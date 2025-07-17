@@ -8,7 +8,7 @@ the API Reference from docstrings. Let's do it step by step!
 ---------------------
 
 The main actor here is the `autodoc <https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html>`_
-extension. It is already installed with Sphinx, and to activate it, add it to your extensions in your ``conf.py``:
+extension. It is already installed with Sphinx, and to activate it, add it to your extensions in your ``docs/conf.py``:
 
 .. code-block:: python
 
@@ -170,7 +170,7 @@ tools to improve it.
 We are using NumPy style docstrings, and there is an extension developed to render well these kinds
 of docstrings: `napoleon <https://www.sphinx-doc.org/en/master/usage/extensions/napoleon.html>`_.
 
-To use it, simply add it in your ``conf.py``:
+To use it, simply add it in your ``docs/conf.py``:
 
 .. code-block:: python
 
@@ -205,7 +205,7 @@ But what about external references? For example, I would like ``matplotlib.pyplo
 parameter) to be linked to `matplotlib documentation <https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.figure.html#matplotlib.pyplot.figure>`_.
 
 A great solution is `intersphinx <https://www.sphinx-doc.org/en/master/usage/extensions/intersphinx.html>`_. To use it, put
-it in your ``conf.py``:
+it in your ``docs/conf.py``:
 
 .. code-block:: python
 
@@ -242,7 +242,7 @@ Build your documentation and watch the magic happen!
 Lastly, a feature that I find very useful in a documentation is to have the source code easily accessible.
 Once again, Sphinx comes with a built-in solution: `viewcode <https://www.sphinx-doc.org/en/master/usage/extensions/viewcode.html>`_.
 
-You know the recipe. In your ``conf.py``:
+You know the recipe. In your ``docs/conf.py``:
 
 .. code-block:: python
 

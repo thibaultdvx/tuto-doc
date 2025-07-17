@@ -2,7 +2,7 @@ Configure your Sphinx documentation
 ===================================
 
 Ok, now we want to customize/configure our Sphinx documentation.
-The ``conf.py`` file play a crucial role. Have a look at it!
+The ``docs/conf.py`` file play a crucial role. Have a look at it!
 
 It is a Python file, so it can definitely contain Python logic, however
 it is mostly use to define some variables. For example, the theme is
@@ -20,7 +20,7 @@ First, we need to install it:
 
     poetry add furo --group docs
 
-Then, in ``conf.py``, change ``html_theme`` to ``html_theme = "furo"``.
+Then, in ``docs/conf.py``, change ``html_theme`` to ``html_theme = "furo"``.
 
 Finally, build the documentation! (``make html``).
 
@@ -31,7 +31,7 @@ Change the title
 
 The current title is a bit long. Let's put only ``NeuroPlot`` as title.
 
-In ``conf.py``, add ``html_title = "NeuroPlot"``.
+In ``docs/conf.py``, add ``html_title = "NeuroPlot"``.
 
 Add a logo
 ----------
@@ -44,7 +44,7 @@ We can download it
 And then put it in ``_static/logos``. As you have guess, the ``_static`` folder is where you
 will put all the images or other resources that you want your website to use.
 
-Finally, in ``conf.py``, add the variable ``html_logo = "_static/logos/logo_ARAMISLAB_rvb.png"``.
+Finally, in ``docs/conf.py``, add the variable ``html_logo = "_static/logos/logo_ARAMISLAB_rvb.png"``.
 
 As usual, build your documentation to see the result!
 
@@ -61,7 +61,7 @@ First, we need to install it:
 
     poetry add sphinx-design --group docs
 
-Then, we will tell Sphinx to use it. In ``conf.py``, change ``extensions`` to ``extensions = ["sphinx_design"]``.
+Then, we will tell Sphinx to use it. In ``docs/conf.py``, change ``extensions`` to ``extensions = ["sphinx_design"]``.
 
 Now, we can use its features. For example, change your ``index.rst`` to:
 
@@ -158,7 +158,7 @@ and `sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_:
     poetry add sphinx-copybutton --group docs
     poetry add myst-parser --group docs
 
-2. Add the extensions in ``conf.py``:
+2. Add the extensions in ``docs/conf.py``:
 
 .. code-block:: python
 

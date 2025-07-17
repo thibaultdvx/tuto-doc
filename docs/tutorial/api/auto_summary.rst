@@ -11,7 +11,7 @@ To recap:
 Hopefully, Sphinx extension `autosummary <https://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html>`_
 can take care of this:
 
-1. Activate the extension in your ``conf.py``:
+1. Activate the extension in your ``docs/conf.py``:
 
 .. code-block:: python
 
