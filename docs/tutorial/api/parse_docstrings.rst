@@ -97,7 +97,7 @@ If you remember well, we also put docstrings in some ``__init__.py`` files. To i
         ``neuroplot.plot.single``
         *************************
 
-        .. automodule:: neuroplot.single.plot
+        .. automodule:: neuroplot.plot.single
 
         .. currentmodule:: neuroplot.plot.single
 
@@ -257,6 +257,10 @@ You know the recipe. In your ``docs/conf.py``:
     ]
 
 Build your documentation and try the functionality!
+
+.. raw:: html
+
+   <br><br>
 
 Well, I don't know about you, but I'm quite happy with the improvements we've just made. Nevertheless, I still find our
 API Reference a bit messy. Imagine we have tens of classes to document... It is probably not a good idea to

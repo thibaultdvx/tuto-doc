@@ -189,7 +189,7 @@ To implement these features, we will use respectively
     rm contributing.rst
     echo "# Contributing" > contributing.md
 
-Have a look at the result in your website!
+Rebuild and have a look at the result in your website!
 
 I hope Sphinx configuration is clear now. Please understand that we have only mentioned
 a few examples of the many features offered by Sphinx.
