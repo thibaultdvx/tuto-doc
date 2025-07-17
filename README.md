@@ -36,19 +36,19 @@ history of `doc` was rewritten.
 
 ### If you want to modify a checkpoint
 
-Try not to, but if you really need to modify an old checkpoint in `doc`:
+Try not to, but if you really need to modify an old checkpoint on `doc`:
 
 1. Start an interactive rebase with `git rebase -i <commit-hash-to-your-checkpoint>`.
-2. In the editor, change "pick" to "edit" for the commit you can't to modify.
+2. In the editor, change "pick" to "edit" for the commit you want to modify.
 3. Make your modifications, and commit.
 4. `git rebase --continue` to continue the rebase (if there are conflicts with the following
 commits).
-5. Once the rebase is done, `git push --force` the `doc` branch.
+5. Once the rebase is done, `git push --force` the `doc` branch to also rewrite the history of `origin/doc`.
 6. Merge `doc` in `main`, and `push` `main`.
 
 ### To check that `doc` and `main` did not diverge
 
-Main should contain the result of the tutorial. And `doc` contains the last checkpoint of the tutorial.
+`main` should contain the result of the tutorial. And `doc` contains the last checkpoint of the tutorial.
 So `doc` and `main` should be very close. The only differences should be in `docs/tutorial` and `docs/index.rst`.
 
-To make sure that they have not diverged, use: `git diff --name-only main doc 
+To make sure that they have not diverged, use: `git diff --name-only main doc`
