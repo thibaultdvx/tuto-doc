@@ -191,6 +191,10 @@ To implement these features, we will use respectively
 
 Rebuild and have a look at the result in your website!
 
+.. raw:: html
+
+   <br><br>
+
 I hope Sphinx configuration is clear now. Please understand that we have only mentioned
 a few examples of the many features offered by Sphinx.
 
