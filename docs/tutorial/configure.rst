@@ -41,7 +41,7 @@ We still miss a logo! There's no official ``NeuroPlot`` logo yet, so let's use A
 We can download it 
 `here <https://owncloud.icm-institute.org/index.php/apps/files/?dir=/ARAMISLAB-Shared/Logo/Sources/logos_png&fileid=39809112#/ARAMISLAB-Shared/Logo/Sources/logos_png/logo_ARAMISLAB_rvb.png>`_.
 
-And then put it in ``_static/logos``. As you have guess, the ``_static`` folder is where you
+And then put it in ``docs/_static/logos``. As you have guess, the ``_static`` folder is where you
 will put all the images or other resources that you want your website to use.
 
 Finally, in ``docs/conf.py``, add the variable ``html_logo = "_static/logos/logo_ARAMISLAB_rvb.png"``.
@@ -63,9 +63,9 @@ First, we need to install it:
 
 Then, we will tell Sphinx to use it. In ``docs/conf.py``, change ``extensions`` to ``extensions = ["sphinx_design"]``.
 
-Now, we can use its features. For example, change your ``index.rst`` to:
+Now, we can use its features. For example, change your ``docs/index.rst`` to:
 
-.. dropdown:: ``index.rst``
+.. dropdown:: ``docs/index.rst``
 
     .. code-block:: rst
 
@@ -137,19 +137,20 @@ Other improvements
 ------------------
 
 I think you're beginning to understand how it works: to change settings in our
-documentation, we change/add variable in ``conf.rst``. Sometimes, we also need to
+documentation, we change/add variable in ``docs/conf.py``. Sometimes, we also need to
 install extensions.
 
 To make sure you're completely comfortable with Sphinx settings, let's take as examples
 two other features that we would like to implement:
 
-- in our ``installation`` page, we will probably have commands that the user
-  would like to copy easily, so we would a copy button;
+- in our ``Installation`` page, we will probably have commands that the user
+  would like to copy easily, so we would like a copy button;
 - as mentioned :ref:`earlier <markdown>`, we would like Sphinx to be able to read ``markdown``
   files.
 
-To implement these features, we will use respectively `myst-parser <https://myst-parser.readthedocs.io/en/v0.16.1/index.html>`_
-and `sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_:
+To implement these features, we will use respectively 
+`sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_ and
+`myst-parser <https://myst-parser.readthedocs.io/en/v0.16.1/index.html>`_:
 
 1. Install the extensions:
 
@@ -170,7 +171,7 @@ and `sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_:
 
 3. Test the functionalities:
 
-- Change ``installation.rst`` to:
+- Change ``docs/installation.rst`` to:
 
 .. code-block:: rst
 
@@ -181,7 +182,7 @@ and `sphinx-copybutton <https://sphinx-copybutton.readthedocs.io/en/latest/>`_:
 
         pip install neuroplot
 
-- Replace ``contributing.rst`` with a ``contributing.md``:
+- Replace ``docs/contributing.rst`` with a ``docs/contributing.md``:
 
 .. code-block:: bash
 

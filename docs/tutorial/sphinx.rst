@@ -92,7 +92,7 @@ But it is empty, let's :doc:`fill it <write>`!
     and let it run in the background.
 
     By doing so, when you make a change to your documentation, you just have to run ``make html``,
-    and then refresh the http://localhost:8888/ page in your web browser.
+    and then **refresh the http://localhost:8888/ page** in your web browser to see the changes.
 
 .. admonition:: Under the hood
     :class: hint
