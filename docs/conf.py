@@ -23,6 +23,7 @@ extensions = [
     "sphinx.ext.intersphinx",
     "sphinx.ext.viewcode",
     "sphinx.ext.autosummary",
+    "sphinx.ext.extlinks",
     "sphinx_gallery.gen_gallery",
     "sphinxcontrib.bibtex",
 ]
@@ -50,6 +51,13 @@ sphinx_gallery_conf = {
 }
 
 bibtex_bibfiles = ["references.bib"]
+
+extlinks = {
+    "nibabel": (
+        "https://nipy.org/nibabel/%s",
+        None,
+    ),
+}
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

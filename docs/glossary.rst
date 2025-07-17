@@ -5,4 +5,4 @@ Glossary
     :sorted:
     
     RAS+
-        `<https://nipy.org/nibabel/coordinate_systems.html#naming-reference-spaces>`_
+        See :nibabel:`nibabel <coordinate_systems.html#naming-reference-spaces>`.
